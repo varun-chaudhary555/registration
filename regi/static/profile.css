@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(238, 247, 249);
+}
+
+.navbar ul li a {
+    color: navy !important;
+}
+
+.navbar ul li a:hover {
+    color: blue !important;
+}
+
+.navbar ul {
+    margin-left: auto;
+}
+
+/* Custom CSS for the sidebar */
+#wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#sidebar {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #0b2239;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #0b2239;
+    border-bottom: 1px solid white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    list-style: none;
+}
+
+#sidebar ul p {
+    padding: 10px;
+    color: #fff;
+}
+
+.content-header {
+    color: navy;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 13px;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #264666;
+    text-decoration: none;
+    border-left: 2px solid #1a6ce8;
+}
+
+
+#sidebar ul.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+
+#sidebar ul.submenu li {
+    border-bottom: none;
+}
+
+#sidebar ul.submenu li a {
+    color: #d1d1d1;
+    background-color: #0b2239;
+    padding-left: 15px;
+  
+}
+
+#sidebar ul.submenu li a:hover {
+    background-color: #264666;
+    color: #fff;
+}
+
+#content {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.toggle-btn {
+    position: absolute;
+    left: 250px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.collapsed #sidebar {
+    margin-left: -250px;
+}
+
+.collapsed #content {
+    margin-left: 0;
+    width: 100%;
+}
+
+.collapsed .toggle-btn {
+    left: 0;
+}
+
+/* Profile Information Styling */
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details h3 {
+    margin: 0;
+    color: #333;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.contact-item {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.contact-item span {
+    font-weight: bold;
+    color: #333;
+}
+
+.content-container {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .collapsed #sidebar {
+        margin-left: 0;
+    }
+
+    .collapsed #content {
+        margin-left: 0;
+    }
+}
+
+/* ------------ */
+.profile-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.profile-header h3 {
+    margin: 0;
+}
+
+.profile-header p {
+    color: #888;
+}
+
+.nav-tabs {
+    margin-top: 20px;
+}
+
+.tab-header a {
+    color: black;
+}
+
+.tab-content {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.save-button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.nav-tabs .nav-link:hover {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.save-button {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(75, 14, 154, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
